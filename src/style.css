@@ -1,7 +1,7 @@
 /* src/style.css */
 
 /* ตัวอย่าง: ถ้าไฟล์ชื่อ NotoSans-Regular.ttf */
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans';
     src: url('./assets/fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -13,6 +13,12 @@
     src: url('./assets/fonts/Pixelify_Sans/PixelifySans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+} */
+@font-face {
+    font-family: 'Prompt';
+    src: url('./assets/fonts/Prompt/Prompt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* นำมาใช้งาน */
@@ -22,6 +28,6 @@ body,
     height: 100%;
     margin: 0;
     background-color: #ffffff;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Prompt', sans-serif;
     color: #000000;
 }
