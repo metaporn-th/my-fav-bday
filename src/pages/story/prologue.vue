@@ -53,8 +53,9 @@ let index = 0
 const currentScene = ref(0)
 
 const currentSceneData = computed<Scene>(() => {
-  return scenes[currentScene.value] || scenes[0]
+  return scenes[currentScene.value]!
 })
+
 
 function typeText(text: string, callback: () => void) {
   displayedText.value = ''
@@ -72,14 +73,17 @@ function typeText(text: string, callback: () => void) {
 }
 
 function startScene() {
-  showBox.value = true
-  typeText(scenes[currentScene.value].text, () => {
+
+
+  typeText(currentSceneData.value.text, () => {
     if (currentScene.value < scenes.length - 1) {
       currentScene.value++
       startScene()
     }
   })
+    showBox.value = true
 }
+
 
 onMounted(() => {
   setTimeout(() => {
