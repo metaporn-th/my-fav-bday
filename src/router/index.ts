@@ -13,6 +13,11 @@ const routes = [
     name: 'DressUpStarter',
     component: DressUpStarter,
   },
+  {
+    path: '/story/prologue',
+    name: 'Prologue',
+    component: () => import('@/pages/story/prologue.vue'),
+  }
 ]
 
 const router = createRouter({

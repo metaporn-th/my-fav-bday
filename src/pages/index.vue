@@ -6,10 +6,15 @@
         <div class="desc">
             (เวย์-แฟเรอร์) : นักเดินทางที่ชอบสำรวจและค้นหาสิ่งใหม่ๆ อยู่เสมอ
         </div>
-        <button class="start-btn">GO !</button>
+        <button class="start-btn" @click="start">GO !</button>
     </div>
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const start = () => {
+    router.push('/story/prologue');
+}
 </script>
 <style scoped>
 .container {
@@ -37,6 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: 600px) {
+        width: 80%;
+    }
 }
 .start-btn {
     margin-top: 40px;
