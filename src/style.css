@@ -1,8 +1,27 @@
-import html,
+/* src/style.css */
+
+/* ตัวอย่าง: ถ้าไฟล์ชื่อ NotoSans-Regular.ttf */
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('./assets/fonts/Pixelify_Sans/PixelifySans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* นำมาใช้งาน */
+html,
 body,
 #app {
     height: 100%;
     margin: 0;
-    background-color: #000;
-    font-family: 'Pixelify Sans', cursive;
+    background-color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    color: #000000;
 }
